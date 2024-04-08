@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Nome da marca</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu" class="label__menu-hamburguer">
+                <span class="cabecalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cabelos</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Perfumes e Perfumaria</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Maquiagem</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Skincare</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cuidados Pessoais</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Bem-Estar e Saúde</a></li>
+            </ul>
+            <img src="./assets/Logo.svg" class="container__imagem" alt="Logo da nossa marca">
+        </div>
+        <ul class="opcoes">
+            <li class="opcoes__item opcoes__item-menu">Categorias</li>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Favoritos</a></li>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Ajuda</a></li>
+            <ul class="lista-menu">
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cabelos</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Perfumes e Perfumaria</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Maquiagem</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Skincare</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cuidados Pessoais</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Bem-Estar e Saúde</a></li>
+            </ul>
+        </ul>
+        <div class="container">
+            <a href="#"><img src="./assets/Favoritos.svg" class="container__imagem imagem__favoritos"></a>
+            <a href="#" class="container__link container__link-compras"><img src="./assets/Compras.svg" class="container__imagem container__imagem-transparente"><p class="container__texto">Minha sacola</p></a>
+            <a href="#" class="container__link container__link-usuario"><img src="./assets/Usuário.svg" class="container__imagem container__imagem-transparente"><p class="container__texto">Meu perfil</p></a>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <h2 class="banner__titulo">Já sabe o que procura?</h2>
+            <p class="banner__texto">Encontre o que você precisa para sua beleza!</p>
+            <input type="search" class="banner__pesquisa" placeholder="Busque aqui!">
+        </section>
+        <section class="carrossel-marcas">
+            <h2 class="carrossel-marcas__titulo">Marcas</h2>
+            <div class="swiper swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/carolineHerrera.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/clinique.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/eudora.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/loreal.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/mac.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/rabanne.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/truss.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/wella.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/redken.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/dior.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/lancome.webp" class="carrossel-marcas__imagem"></div>
+                    <div class="swiper-slide"><img src="./assets/carrossel-marcas/givenchy.webp" class="carrossel-marcas__imagem"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="carrossel-lancamentos">
+            <h2 class="carrossel-lancamentos__titulo">Últimos lançamentos</h2>
+            <div class="swiper swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto01.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">NAH CARDOSO BY BLZ</strong><br>
+                            Kit Glossy Lips Kindness & Soft Liner Brave (2 Produtos)
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto02.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">NAH CARDOSO BY BLZ</strong><br>
+                            Kit Completo (8 Produtos)
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto03.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">CATRICE</strong><br>
+                            Glossin' Glow 030 Glow For The Show - Óleo Labial 4ml
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto04.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">MAYBELLINE</strong><br>
+                            Kit The Colossal Volum'Express Lavável Preto - Máscara de Cílios 2x9,2ml
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto05.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">VULT</strong><br>
+                            Colors Neon Laranja Elétrico - Esmalte 8ml
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto06.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">CLARINS</strong><br>
+                            Aroma Eau Ressourçante Body Cream - Creme Corporal 200ml
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto07.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">TRUSS</strong><br>
+                            Kit Truss Equilibrium Night Spa Care (3 Produtos)
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto08.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">BELEZA NA WEB</strong><br>
+                            Kit Keune Care Satin Oil e Wet Brush Go Green Trio (3 Produtos)
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto09.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">ADOLFO DOMINGUEZ</strong><br>
+                            Água de Bambú Eau de Toilette - Perfume Feminino 120ml
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-lancamentos">
+                        <img src="./assets/carrossel-lancamentos/produto10.webp" class="carrossel-lancamentos__imagem">
+                        <p class="carrossel-lancamentos__texto">
+                            <strong class="carrossel-lancamentos__vendedor">BELEZA NA WEB</strong><br>
+                            Kit Keune Absolute Volume e Wet Brush Detangler Duo (2 Produtos)
+                        </p>
+                        <div class="carrossel-lancamentos__avaliacao">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                            <img src="./assets/carrossel-lancamentos/Star1.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="contato">
+            <div class="contato__container">
+                <h2 class="contato__titulo">Cadastre-se para receber novidades e promoções exclusivas!</h2>
+                <p class="contato__texto">Fique por dentro dos últimos lançamentos, eventos, tendências, moda e outros.</p>
+            </div>
+            <input type="email" class="contato__email" placeholder="Cadastre seu e-mail">
+        </section>
+    </main>
+    <footer class="rodape">
+        <h2 class="rodape__titulo">Desenvolvido por Celso Siqueira</h2>
+        <div class="rodape-contato">
+            <p class="rodape-contato__texto">Me encontre:</p>
+            <a href="https://www.linkedin.com/in/celso-jacinto-de-siqueira-neto-23500a170" class="rodape-contato__link">
+                <img src="./assets/rodape/linkedin.svg" class="rodape-contato__imagem">Linkedin</a>
+            <a href="https://github.com/CelsoSiqueira1996" class="rodape-contato__link">
+                <img src="./assets/rodape/github.svg" class="rodape-contato__imagem">Github</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper1 = new Swiper('.swiper1', {
+            autoplay: {
+                delay: 5000,
+            },
+            spaceBetween: 10,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                900: {
+                slidesPerView: 4,
+                spaceBetween: 20
+                },
+                1300: {
+                slidesPerView: 5,
+                spaceBetween: 30
+                }
+            }
+        });
+        const swiper2 = new Swiper('.swiper2', {
+            spaceBetween: 5,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                900: {
+                slidesPerView: 4,
+                spaceBetween: 15
+                },
+                1300: {
+                slidesPerView: 5,
+                spaceBetween: 20
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
