@@ -8,7 +8,6 @@
     font-weight: 700;
     margin-bottom: 1em;
     font-family: var(--fonte-principal);
-
 }
 
 .swiper-pagination {
@@ -21,7 +20,7 @@
 }
 
 .slide-lancamentos {
-    border: 0.5px solid var(--cor-quaternaria);
+    border: 0.5px solid var(--cor-secundaria);
     border-radius: 8px;
     padding: 2em 0.2em;
     height: auto;
@@ -38,7 +37,7 @@
     font-family: var(--fonte-secundaria);
     text-transform: uppercase;
     width: 30vw;
-    color: var(--cor-quaternaria);
+    color: var(--cor-secundaria);
     margin: 0.5em;
 }
 
