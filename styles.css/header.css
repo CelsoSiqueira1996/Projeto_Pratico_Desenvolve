@@ -21,6 +21,10 @@
     display: none;
 }
 
+.container__titulo {
+    display: none;
+}
+
 .cabecalho__menu-hamburguer {
     width: 24px;
     height: 24px;
@@ -83,11 +87,20 @@
 @media screen and (min-width: 900px) {
 
     .cabecalho {
+        padding: 0 2em 0 2em;
         margin-top: 0;
     }
 
     .container {
         height: auto;
+    }
+
+    .container__titulo {
+        display: block;
+        font-family: "Kaushan Script", cursive;
+        padding-right: 1em;
+        font-size: 24px;
+        color: var(--cor-quaternaria);
     }
 
     .cabecalho__menu-hamburguer {
@@ -141,7 +154,7 @@
     .opcoes {
         margin-right: auto;
     }
-
+    
     .container__link-compras {
         height: 36px;
         background-image: url(../assets/Compras.svg);
