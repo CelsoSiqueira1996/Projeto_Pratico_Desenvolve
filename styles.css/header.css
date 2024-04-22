@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5em;
     background-color: var(--cor-primaria);
     position: sticky;
     top: 0;
