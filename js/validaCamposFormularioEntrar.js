@@ -119,7 +119,7 @@ function verificaCampoFormulario(campo) {
 function gerarMensagemSucesso() {
     mensagemSucesso.innerHTML = `
         <p class="mensagem-sucesso__texto">Cadastro realizado com sucesso!<p>
-        <img src="../assets/check_circle.png" class="mensagem-sucesso__imagem">`;
+        <img src="../assets/check_circle.svg" class="mensagem-sucesso__imagem">`;
 
     divMensagemSucesso.classList.add("show");
     
