@@ -3,7 +3,8 @@ import ehSenhaValida from "./validaSenha.js";
 import conferirSenhas from "./verificaSenha.js";
 import ehUmCpfValido from "./validaCpf.js";
 
-const formularioNovoUsuario = document.querySelector(".formulario-registrar");
+const formularioEntrar = document.querySelector(".formulario__entrar");
+const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const camposFormulario = formularioNovoUsuario.querySelectorAll("[required]");
 const campoSenhaCadastrar = document.querySelector("#senha");
 const btnCadastrar = document.querySelector(".botao__cadastrar-usuario");
@@ -50,6 +51,7 @@ formularioNovoUsuario.addEventListener("submit", (evento) => {
     const mensagemErro = campoSenhaCadastrar.parentNode.querySelector(".mensagem-erro");
     mensagemErro.textContent = "";
     formularioNovoUsuario.reset();
+    formularioEntrar.reset();
     modal.style.display = "none";
     listaUsuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));

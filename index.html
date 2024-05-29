@@ -11,6 +11,7 @@
     <title>BellaViva</title>
     <script src="./js/modal.js" defer></script>
     <script src="./js/validaCamposFormularioNovoUsuario.js" defer type="module"></script>
+    <script src="./js/logar/validaCamposFormularioEntrar.js" defer type="module"></script>
 </head>
 <body>
     <div class="mensagem__feedback-sucesso">
@@ -476,7 +477,7 @@
                 <form class="formulario formulario__entrar">
                     <fieldset class="formulario__campo">
                         <label class="formulario__etiqueta" for="cpf">CPF</label>
-                        <input type="text" id="cpf" class="campo__escrita" required>
+                        <input type="text" id="cpf__logar" class="campo__escrita" required>
                         <span class="mensagem-erro"></span>
                     </fieldset>
                     <fieldset class="formulario__campo">
@@ -487,9 +488,10 @@
                     <p class="formulario__texto formulario__texto-inicial">Novo por aqui? <strong class="formulario__texto__novo-usuario">Registre-se.</strong></p>
                     <fieldset class="formulario__campo__botao">
                         <input type="submit" class="botao__logar" value="Entrar">
-                    </fieldset>
+                        <span class="mensagem-erro mensagem-erro__logar"></span>
+                    </fieldset>                    
                 </form>
-                <form class="formulario formulario-registrar">
+                <form class="formulario formulario__registrar">
                     <fieldset class="formulario__campo">
                         <label for="nome" class="formulario__etiqueta">Nome completo</label>
                         <input type="text" id="nome" class="campo__escrita" minlength="3" required>

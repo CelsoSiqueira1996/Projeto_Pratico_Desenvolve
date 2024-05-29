@@ -33,7 +33,7 @@
 .mensagem-sucesso {
   display: flex;
   justify-content: center;
-  padding: 0.3em 0.5em;
+  padding: 0.1em 1.5em;
   align-items: center;
   text-align: center;
   font-family: var(--fonte-principal);
@@ -74,7 +74,7 @@
   cursor: pointer;
 }
 
-.formulario-registrar {
+.formulario__registrar {
   display: none;
 }
 
@@ -113,12 +113,14 @@
 
 .formulario__campo__botao{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 1.5em;
+  align-items: center;
 }
 
 .botao__logar, .botao__cadastrar-usuario {
   padding: 0.5em 1em;
+  margin: 1.5em;
   font-weight: 700;
   font-size: 16px;
   border: none;
@@ -148,5 +150,9 @@
   color: red;
   font-family: var(--fonte-secundaria);
   font-size: 12px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+}
+
+.mensagem-erro__logar {
+  font-size: 16px;
 }
