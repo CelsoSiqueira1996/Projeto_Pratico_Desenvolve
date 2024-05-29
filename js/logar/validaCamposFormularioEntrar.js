@@ -72,10 +72,15 @@ function verificarUsuario() {
 }
 
 function gerarMensagemSucesso() {
-    mensagemSucesso.innerHTML = `
-        <p class="mensagem-sucesso__texto">Login realizado com sucesso!<p>
-        <img src="../assets/Logo.svg" class="mensagem-sucesso__imagem">`;
+    const mensagemSucessoTexto = document.createElement("p");
+    mensagemSucessoTexto.classList.add("mensagem-sucesso__texto");
+    mensagemSucessoTexto.textContent = "Login realizado com sucesso!";
 
+    while(mensagemSucesso.childElementCount > 1 ) {
+        mensagemSucesso.removeChild(mensagemSucesso.firstChild);
+    }
+    
+    mensagemSucesso.insertBefore(mensagemSucessoTexto, mensagemSucesso.firstChild);
     divMensagemSucesso.classList.add("show");
     
     setTimeout(() => {

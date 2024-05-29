@@ -119,10 +119,15 @@ function verificaCampoFormulario(campo) {
 }
 
 function gerarMensagemSucesso() {
-    mensagemSucesso.innerHTML = `
-        <p class="mensagem-sucesso__texto">Cadastro realizado com sucesso!<p>
-        <img src="../assets/check.svg" class="mensagem-sucesso__imagem">`;
+    const mensagemSucessoTexto = document.createElement("p");
+    mensagemSucessoTexto.classList.add("mensagem-sucesso__imagem");
+    mensagemSucessoTexto.textContent = "Cadastro realizado com sucesso!";
 
+    while(mensagemSucesso.childElementCount > 1 ) {
+        mensagemSucesso.removeChild(mensagemSucesso.firstChild);
+    }
+
+    mensagemSucesso.insertBefore(mensagemSucessoTexto, mensagemSucesso.firstChild);
     divMensagemSucesso.classList.add("show");
     
     setTimeout(() => {
