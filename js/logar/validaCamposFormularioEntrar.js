@@ -56,7 +56,6 @@ function verificarUsuario() {
     cpf.setCustomValidity("");
     senha.setCustomValidity("");
     let mensagem = ""; 
-    debugger;
     if(cpf.value && senha.value) {
         const usuario = listaUsuarios.filter((usuario) => usuario.cpf == cpfFormatado);
         if(usuario.length == 0) {
@@ -75,7 +74,7 @@ function verificarUsuario() {
 function gerarMensagemSucesso() {
     mensagemSucesso.innerHTML = `
         <p class="mensagem-sucesso__texto">Login realizado com sucesso!<p>
-        <img src="../assets/check.svg" class="mensagem-sucesso__imagem">`;
+        <img src="../assets/Pesquisa.svg" class="mensagem-sucesso__imagem">`;
 
     divMensagemSucesso.classList.add("show");
     
