@@ -12,7 +12,7 @@ const modal = document.querySelector(".modal");
 const divMensagemSucesso = document.querySelector(".mensagem__feedback-sucesso");
 const mensagemSucesso = document.querySelector(".mensagem-sucesso");
 
-const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+export const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 btnCadastrar.addEventListener("click", () => {
     camposFormulario.forEach((campo) => verificaCampoFormulario(campo));

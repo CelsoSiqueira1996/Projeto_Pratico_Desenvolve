@@ -1,3 +1,5 @@
+import { listaUsuarios } from "../validaCamposFormularioNovoUsuario.js";
+
 const formularioEntrar = document.querySelector(".formulario__entrar");
 const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const camposFormulario = formularioEntrar.querySelectorAll("[required]");
@@ -8,8 +10,6 @@ const senha = document.querySelector("#senha__logar");
 const divMensagemSucesso = document.querySelector(".mensagem__feedback-sucesso");
 const mensagemSucesso = document.querySelector(".mensagem-sucesso");
 const mensagemErroUsuario = document.querySelector(".mensagem-erro__logar");
-
-const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 btnLogar.addEventListener("click", () => {
     camposFormulario.forEach((campo) => verificaCampoFormulario(campo));
@@ -56,6 +56,7 @@ function verificarUsuario() {
     cpf.setCustomValidity("");
     senha.setCustomValidity("");
     let mensagem = ""; 
+    debugger;
     if(cpf.value && senha.value) {
         const usuario = listaUsuarios.filter((usuario) => usuario.cpf == cpfFormatado);
         if(usuario.length == 0) {
