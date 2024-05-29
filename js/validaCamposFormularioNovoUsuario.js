@@ -39,6 +39,7 @@ campoSenhaCadastrar.addEventListener("focus", () => {
 campoSenhaCadastrar.addEventListener("input", () => verificaCampoFormulario(campoSenhaCadastrar));
 
 formularioNovoUsuario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
     const usuario = {
         nome: evento.target.elements['nome'].value,
         email: evento.target.elements['email'].value,
@@ -52,7 +53,6 @@ formularioNovoUsuario.addEventListener("submit", (evento) => {
     modal.style.display = "none";
     listaUsuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
-    debugger;
     gerarMensagemSucesso();
 });
 
@@ -119,7 +119,7 @@ function verificaCampoFormulario(campo) {
 function gerarMensagemSucesso() {
     mensagemSucesso.innerHTML = `
         <p class="mensagem-sucesso__texto">Cadastro realizado com sucesso!<p>
-        <img src="../assets/check_circle.png" class="mensagem-sucesso__imagem">`;
+        <img src="../assets/check_circle.svg" class="mensagem-sucesso__imagem">`;
 
     divMensagemSucesso.classList.add("show");
     
