@@ -75,7 +75,7 @@ function verificarUsuario() {
 function gerarMensagemSucesso() {
     mensagemSucesso.innerHTML = `
         <p class="mensagem-sucesso__texto">Login realizado com sucesso!<p>
-        <img src="../assets/check_circle.svg" class="mensagem-sucesso__imagem">`;
+        <img src="../assets/check.svg" class="mensagem-sucesso__imagem">`;
 
     divMensagemSucesso.classList.add("show");
     
