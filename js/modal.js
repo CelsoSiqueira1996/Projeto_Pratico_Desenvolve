@@ -47,6 +47,13 @@ registrarUsuario.addEventListener("mouseover", () => {
     );
 });
 
+registrarUsuario.addEventListener("click", () => {
+    registrarUsuario.setAttribute(
+        "style",
+        "text-decoration: underline; cursor: pointer; color: green" 
+    );
+});
+
 registrarUsuario.addEventListener("mouseout", () => {
     registrarUsuario.removeAttribute("style");
 });

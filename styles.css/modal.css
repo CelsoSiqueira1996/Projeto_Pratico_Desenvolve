@@ -33,7 +33,7 @@
 .mensagem-sucesso {
   display: flex;
   justify-content: center;
-  padding: 0.2em 1.5em;
+  padding: 0.5em 1.5em;
   align-items: center;
   text-align: center;
   font-family: var(--fonte-principal);
@@ -90,6 +90,7 @@
 
 .campo__escrita {
   font-family: var(--fonte-secundaria);
+  font-weight: 550;
   font-size: 12px;
   background-color: var(--cor-terciaria);
   border: 2px solid var(--cor-secundaria);
@@ -129,20 +130,15 @@
   font-size: 16px;
   border: none;
   font-family: var(--fonte-secundaria);
-  background-color: #228BE6;
   color: var(--cor-primaria);
-}
-
-.botao__logar:hover, .botao__cadastrar-usuario:hover {
   cursor: pointer;
   background-color: #4DABF7;
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .botao__logar:active, .botao__cadastrar-usuario:active {
   cursor: pointer;
-  transform: translateY(-1px);
+  transform: translateY(1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -155,8 +151,22 @@
   font-family: var(--fonte-secundaria);
   font-size: 12px;
   margin-bottom: 1em;
+  font-weight: 550;
 }
 
 .mensagem-erro__logar {
   font-size: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  .modal__conteudo__formulario {
+    width: 35%;
+    margin: 8% auto auto auto;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .modal__conteudo__formulario {
+    width: 25%;
+  }
 }
