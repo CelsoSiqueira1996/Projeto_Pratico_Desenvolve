@@ -1,0 +1,152 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.mensagem__feedback-sucesso {
+  display: flex;
+  justify-content: center;
+  max-height: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
+  transition: opacity 3s linear, max-height 3s ease-in-out;
+}
+
+.show {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.mensagem-sucesso {
+  display: flex;
+  justify-content: center;
+  padding: 0.3em 0.5em;
+  align-items: center;
+  text-align: center;
+  font-family: var(--fonte-principal);
+  font-size: 12px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid var(--cor-secundaria);
+  box-sizing: border-box;
+}
+
+.modal__conteudo__formulario {
+  padding: 2em 1.5em 0.5em 1.5em;
+  margin: 15% auto auto auto;
+  background-color: var(--cor-primaria);
+  border-radius: 16px;
+  border: 2px solid var(--cor-secundaria);
+  width: 60%;
+  position: relative;
+}
+
+.formulario__campo {
+  margin-bottom: 0.8em;
+}
+
+.fechar {
+  position: absolute;
+  top: 0.3em;
+  right: 0.5em;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.formulario-registrar {
+  display: none;
+}
+
+.formulario__etiqueta {
+  font-family: var(--fonte-secundaria);
+  text-align: left;
+  font-weight: 700;
+}
+
+.campo__escrita {
+  font-family: var(--fonte-secundaria);
+  font-size: 12px;
+  background-color: var(--cor-terciaria);
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 24px;
+  padding: 0.8em;
+  margin: 0.8em 0 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario__texto {
+  font-family: var(--fonte-secundaria);
+  text-align: center;
+}
+
+.formulario__texto-secundario {
+  display: none;
+}
+
+.formulario__texto__novo-usuario, .formulario__texto__login {
+  font-weight: 700;
+  color: #33dfaa;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+.formulario__campo__botao{
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+}
+
+.botao__logar, .botao__cadastrar-usuario {
+  padding: 0.5em 1em;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  font-family: var(--fonte-secundaria);
+  background-color: #228BE6;
+  color: var(--cor-primaria);
+}
+
+.botao__logar:hover, .botao__cadastrar-usuario:hover {
+  cursor: pointer;
+  background-color: #4DABF7;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.botao__logar:active, .botao__cadastrar-usuario:active {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.campo__confirmar-senha {
+  display: none;
+}
+
+.mensagem-erro {
+  color: red;
+  font-family: var(--fonte-secundaria);
+  font-size: 12px;
+  margin-bottom: 3em;
+}
