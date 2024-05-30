@@ -1,5 +1,5 @@
 const modal = document.querySelector(".modal");
-const loginUsuario = document.querySelector(".container__link-usuario");
+const loginUsuario = document.querySelector("#pagina__inicial");
 const registrarUsuario = document.querySelector(".formulario__texto__novo-usuario");
 const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const formularioLogin = document.querySelector(".formulario__entrar");
@@ -65,22 +65,8 @@ registrarUsuario.addEventListener("mouseover", () => {
     );
 });
 
-registrarUsuario.addEventListener("click", () => {
-    registrarUsuario.setAttribute(
-        "style",
-        "text-decoration: underline; cursor: pointer; color: green" 
-    );
-});
-
 registrarUsuario.addEventListener("mouseout", () => {
     registrarUsuario.removeAttribute("style");
-});
-
-logarUsuario.addEventListener("click", () => {
-    logarUsuario.setAttribute(
-        "style",
-        "text-decoration: underline; cursor: pointer; color: green" 
-    );
 });
 
 logarUsuario.addEventListener("mouseover", () => {

@@ -12,6 +12,7 @@
     <script src="./js/modal.js" defer></script>
     <script src="./js/validaCamposFormularioNovoUsuario.js" defer type="module"></script>
     <script src="./js/logar/validaCamposFormularioEntrar.js" defer type="module"></script>
+    <script src="./js/logar/desconectarUsuario.js" defer></script>
 </head>
 <body>
     <div class="mensagem__feedback-sucesso">
@@ -51,7 +52,12 @@
         <div class="container">
             <a href="#"><img src="./assets/Favoritos.svg" class="container__imagem imagem__favoritos"></a>
             <a href="#" class="container__link container__link-compras"><img src="./assets/Compras.svg" class="container__imagem container__imagem-transparente"><p class="container__texto">Minha sacola</p></a>
-            <a href="#" class="container__link container__link-usuario"><img src="./assets/Usuário.svg" class="container__imagem container__imagem-transparente"><p class="container__texto">Meu perfil</p></a>
+            <a href="#" class="container__link container__link-usuario" id="pagina__inicial"><img src="./assets/Usuário.svg" class="container__imagem container__imagem-transparente"><p class="container__texto">Meu perfil</p></a>
+            <a href="#" class="container__link container__link-usuario" id="usuario__logado">
+                <img src="./assets/Usuário.svg" class="container__imagem container__imagem-transparente">
+                <p class="container__texto"></p>
+                <span class="botao__sair">Sair</span>
+            </a>
         </div>
     </header>
     <main>

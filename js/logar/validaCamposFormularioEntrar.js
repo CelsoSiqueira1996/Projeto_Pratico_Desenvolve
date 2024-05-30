@@ -26,10 +26,15 @@ camposFormulario.forEach((campo) => {
 
 formularioEntrar.addEventListener("submit", (evento) => {
     evento.preventDefault();
+    const cpfLogado = cpf.value.replace(/\.|-/g, "");
+    const usuarioCpfLogado = listaUsuarios.filter((usuario) => usuario.cpf == cpfLogado);
+    const nomeUsuarioLogado = usuarioCpfLogado[0].nome;
+    const primeiroNomeUsuarioLogado = nomeUsuarioLogado.trim().split(" ")[0];
     formularioEntrar.reset();
     formularioNovoUsuario.reset();
     modal.style.display = "none";
-    gerarMensagemSucesso();
+    gerarMensagemSucessoLogin();
+    usuarioLogado(primeiroNomeUsuarioLogado);
 });
 
 const mensagens = {
@@ -71,7 +76,7 @@ function verificarUsuario() {
     mensagemErroUsuario.textContent = mensagem;
 }
 
-function gerarMensagemSucesso() {
+function gerarMensagemSucessoLogin() {
     const mensagemSucessoTexto = document.createElement("p");
     mensagemSucessoTexto.classList.add("mensagem-sucesso__texto");
     mensagemSucessoTexto.textContent = "Login realizado com sucesso!";
@@ -87,4 +92,13 @@ function gerarMensagemSucesso() {
         divMensagemSucesso.classList.remove("show");
     }, 5000);
 
+}
+
+function usuarioLogado(nome) {
+    const btnUsuario = document.querySelector("#pagina__inicial");
+    const btnUsuarioLogado = document.querySelector("#usuario__logado");
+    const btnUsuarioLogadoTexto = btnUsuarioLogado.querySelector("p");
+    btnUsuario.style.display = "none";
+    btnUsuarioLogadoTexto.textContent = `Olá, ${nome}!`
+    btnUsuarioLogado.style.display = "flex";
 }

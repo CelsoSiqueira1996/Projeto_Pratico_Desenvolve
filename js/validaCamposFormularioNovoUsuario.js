@@ -55,7 +55,7 @@ formularioNovoUsuario.addEventListener("submit", (evento) => {
     modal.style.display = "none";
     listaUsuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
-    gerarMensagemSucesso();
+    gerarMensagemSucessoCadastro();
 });
 
 const erros = [
@@ -118,7 +118,7 @@ function verificaCampoFormulario(campo) {
     mensagemErro.textContent = mensagem;
 }
 
-function gerarMensagemSucesso() {
+function gerarMensagemSucessoCadastro() {
     const mensagemSucessoTexto = document.createElement("p");
     mensagemSucessoTexto.classList.add("mensagem-sucesso__imagem");
     mensagemSucessoTexto.textContent = "Cadastro realizado com sucesso!";
