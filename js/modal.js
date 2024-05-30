@@ -7,6 +7,17 @@ const modalTextoInicial = document.querySelector(".formulario__texto-inicial");
 const modalTextoSecundario = document.querySelector(".formulario__texto-secundario");
 const logarUsuario = document.querySelector(".formulario__texto__login");
 const btnFecharModal = document.querySelector(".fechar");
+const mensagensErro = document.querySelectorAll(".mensagem-erro");
+
+function apagarMensagensErro() {
+    mensagensErro.forEach((mensagem) => {
+        mensagem.textContent = "";
+    })
+}
+
+function resetarFormulario(formulario) {
+    formulario.reset();
+}
 
 function esconderElemento(elemento) {
     elemento.style.display = "none";
@@ -23,12 +34,17 @@ loginUsuario.addEventListener("click", () => {
 window.addEventListener("click", (evento) => {
     if(evento.target == modal) {
         esconderElemento(modal);
+        resetarFormulario(formularioNovoUsuario);
+        resetarFormulario(formularioLogin);
+        apagarMensagensErro();
     }
 });
 
 registrarUsuario.addEventListener("click", () => {
     esconderElemento(formularioLogin);
     esconderElemento(modalTextoInicial);
+    resetarFormulario(formularioLogin);
+    apagarMensagensErro();
     aparecerElemento(formularioNovoUsuario);
     aparecerElemento(modalTextoSecundario);
 });
@@ -36,6 +52,8 @@ registrarUsuario.addEventListener("click", () => {
 logarUsuario.addEventListener("click", () => {
     aparecerElemento(formularioLogin);
     aparecerElemento(modalTextoInicial);
+    resetarFormulario(formularioNovoUsuario);
+    apagarMensagensErro();
     esconderElemento(formularioNovoUsuario);
     esconderElemento(modalTextoSecundario);
 });
@@ -58,6 +76,13 @@ registrarUsuario.addEventListener("mouseout", () => {
     registrarUsuario.removeAttribute("style");
 });
 
+logarUsuario.addEventListener("click", () => {
+    logarUsuario.setAttribute(
+        "style",
+        "text-decoration: underline; cursor: pointer; color: green" 
+    );
+});
+
 logarUsuario.addEventListener("mouseover", () => {
     logarUsuario.setAttribute(
         "style",
@@ -71,4 +96,7 @@ logarUsuario.addEventListener("mouseout", () => {
 
 btnFecharModal.addEventListener('click', () => {
     esconderElemento(modal);
+    resetarFormulario(formularioNovoUsuario);
+    resetarFormulario(formularioLogin);
+    apagarMensagensErro();
 });
