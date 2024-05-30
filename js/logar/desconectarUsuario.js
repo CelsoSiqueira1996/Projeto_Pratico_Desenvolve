@@ -37,6 +37,6 @@ function gerarMensagemSucessoLogout() {
     
     setTimeout(() => {
         divMensagemSucesso.classList.remove("show");
-    }, 3000);
+    }, 4000);
 
 }

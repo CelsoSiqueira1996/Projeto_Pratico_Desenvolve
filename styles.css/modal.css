@@ -14,10 +14,10 @@
   display: flex;
   justify-content: center;
   max-height: 0;
-  width: 80%;
-  position: fixed;
+  width: 100%;
+  position: sticky;
   top: 0;
-  left: 10%;
+  left: 0;
   z-index: 3;
   opacity: 0;
   max-height: 0px;
@@ -33,7 +33,7 @@
 .mensagem-sucesso {
   display: flex;
   justify-content: center;
-  padding: 0.5em 1.5em;
+  padding: 0.2em 1.5em;
   align-items: center;
   text-align: center;
   font-family: var(--fonte-principal);

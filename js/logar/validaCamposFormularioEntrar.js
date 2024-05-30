@@ -90,7 +90,7 @@ function gerarMensagemSucessoLogin() {
     
     setTimeout(() => {
         divMensagemSucesso.classList.remove("show");
-    }, 3000);
+    }, 4000);
 
 }
 
