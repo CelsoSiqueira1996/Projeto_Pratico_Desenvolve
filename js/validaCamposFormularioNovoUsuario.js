@@ -2,15 +2,13 @@ import ehMaiorDeIdade from "./validaIdade.js";
 import ehSenhaValida from "./validaSenha.js";
 import conferirSenhas from "./verificaSenha.js";
 import ehUmCpfValido from "./validaCpf.js";
+import resetarModal from "./reset/resetarModal.js";
+import gerarMensagemSucesso from "./mensagemFeedback/mensagemStatusSucesso.js";
 
-const formularioEntrar = document.querySelector(".formulario__entrar");
 const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const camposFormulario = formularioNovoUsuario.querySelectorAll("[required]");
 const campoSenhaCadastrar = document.querySelector("#senha");
 const btnCadastrar = document.querySelector(".botao__cadastrar-usuario");
-const modal = document.querySelector(".modal");
-const divMensagemSucesso = document.querySelector(".mensagem__feedback-sucesso");
-const mensagemSucesso = document.querySelector(".mensagem-sucesso");
 
 export const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -48,14 +46,10 @@ formularioNovoUsuario.addEventListener("submit", (evento) => {
         "data-nascimento": evento.target.elements['data-nascimento'].value,
         senha: evento.target.elements['senha'].value
     };
-    const mensagemErro = campoSenhaCadastrar.parentNode.querySelector(".mensagem-erro");
-    mensagemErro.textContent = "";
-    formularioNovoUsuario.reset();
-    formularioEntrar.reset();
-    modal.style.display = "none";
+    resetarModal();
     listaUsuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
-    gerarMensagemSucessoCadastro();
+    gerarMensagemSucesso("cadastrar");
 });
 
 const erros = [
@@ -118,20 +112,3 @@ function verificaCampoFormulario(campo) {
     mensagemErro.textContent = mensagem;
 }
 
-function gerarMensagemSucessoCadastro() {
-    const mensagemSucessoTexto = document.createElement("p");
-    mensagemSucessoTexto.classList.add("mensagem-sucesso__imagem");
-    mensagemSucessoTexto.textContent = "Cadastro realizado com sucesso!";
-
-    while(mensagemSucesso.childElementCount > 1 ) {
-        mensagemSucesso.removeChild(mensagemSucesso.firstChild);
-    }
-
-    mensagemSucesso.insertBefore(mensagemSucessoTexto, mensagemSucesso.firstChild);
-    divMensagemSucesso.classList.add("show");
-    
-    setTimeout(() => {
-        divMensagemSucesso.classList.remove("show");
-    }, 4000);
-
-}

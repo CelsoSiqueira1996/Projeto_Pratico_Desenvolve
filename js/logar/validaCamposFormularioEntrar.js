@@ -1,14 +1,12 @@
 import { listaUsuarios } from "../validaCamposFormularioNovoUsuario.js";
+import resetarModal from "../reset/resetarModal.js";
+import gerarMensagemSucesso from "../mensagemFeedback/mensagemStatusSucesso.js";
 
 const formularioEntrar = document.querySelector(".formulario__entrar");
-const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const camposFormulario = formularioEntrar.querySelectorAll("[required]");
 const btnLogar = document.querySelector(".botao__logar");
-const modal = document.querySelector(".modal");
 const cpf = document.querySelector("#cpf__logar");
 const senha = document.querySelector("#senha__logar");
-const divMensagemSucesso = document.querySelector(".mensagem__feedback-sucesso");
-const mensagemSucesso = document.querySelector(".mensagem-sucesso");
 const mensagemErroUsuario = document.querySelector(".mensagem-erro__logar");
 
 btnLogar.addEventListener("click", () => {
@@ -30,10 +28,8 @@ formularioEntrar.addEventListener("submit", (evento) => {
     const usuarioCpfLogado = listaUsuarios.filter((usuario) => usuario.cpf == cpfLogado);
     const nomeUsuarioLogado = usuarioCpfLogado[0].nome;
     const primeiroNomeUsuarioLogado = nomeUsuarioLogado.trim().split(" ")[0];
-    formularioEntrar.reset();
-    formularioNovoUsuario.reset();
-    modal.style.display = "none";
-    gerarMensagemSucessoLogin();
+    resetarModal();
+    gerarMensagemSucesso("entrar");
     usuarioLogado(primeiroNomeUsuarioLogado);
 });
 
@@ -74,24 +70,6 @@ function verificarUsuario() {
         }
     }
     mensagemErroUsuario.textContent = mensagem;
-}
-
-function gerarMensagemSucessoLogin() {
-    const mensagemSucessoTexto = document.createElement("p");
-    mensagemSucessoTexto.classList.add("mensagem-sucesso__texto");
-    mensagemSucessoTexto.textContent = "Login realizado com sucesso!";
-
-    while(mensagemSucesso.childElementCount > 1 ) {
-        mensagemSucesso.removeChild(mensagemSucesso.firstChild);
-    }
-    
-    mensagemSucesso.insertBefore(mensagemSucessoTexto, mensagemSucesso.firstChild);
-    divMensagemSucesso.classList.add("show");
-    
-    setTimeout(() => {
-        divMensagemSucesso.classList.remove("show");
-    }, 4000);
-
 }
 
 function usuarioLogado(nome) {

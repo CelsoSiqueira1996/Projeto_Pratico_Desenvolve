@@ -1,13 +1,14 @@
+import resetarModal from "./reset/resetarModal.js";
+
 const modal = document.querySelector(".modal");
 const loginUsuario = document.querySelector("#pagina__inicial");
 const registrarUsuario = document.querySelector(".formulario__texto__novo-usuario");
 const formularioNovoUsuario = document.querySelector(".formulario__registrar");
 const formularioLogin = document.querySelector(".formulario__entrar");
-const modalTextoInicial = document.querySelector(".formulario__texto-inicial");
-const modalTextoSecundario = document.querySelector(".formulario__texto-secundario");
 const logarUsuario = document.querySelector(".formulario__texto__login");
 const btnFecharModal = document.querySelector(".fechar");
 const mensagensErro = document.querySelectorAll(".mensagem-erro");
+const campoConfirmarSenha = document.querySelector(".campo__confirmar-senha");
 
 function apagarMensagensErro() {
     mensagensErro.forEach((mensagem) => {
@@ -29,33 +30,30 @@ function aparecerElemento(elemento) {
 
 loginUsuario.addEventListener("click", () => {
     aparecerElemento(modal);
+    esconderElemento(formularioNovoUsuario);
+    aparecerElemento(formularioLogin);
 });
 
 window.addEventListener("click", (evento) => {
     if(evento.target == modal) {
-        esconderElemento(modal);
-        resetarFormulario(formularioNovoUsuario);
-        resetarFormulario(formularioLogin);
-        apagarMensagensErro();
+        resetarModal();
     }
 });
 
 registrarUsuario.addEventListener("click", () => {
     esconderElemento(formularioLogin);
-    esconderElemento(modalTextoInicial);
+    esconderElemento(campoConfirmarSenha);
     resetarFormulario(formularioLogin);
     apagarMensagensErro();
     aparecerElemento(formularioNovoUsuario);
-    aparecerElemento(modalTextoSecundario);
 });
 
 logarUsuario.addEventListener("click", () => {
-    aparecerElemento(formularioLogin);
-    aparecerElemento(modalTextoInicial);
     resetarFormulario(formularioNovoUsuario);
     apagarMensagensErro();
+    esconderElemento(campoConfirmarSenha);
     esconderElemento(formularioNovoUsuario);
-    esconderElemento(modalTextoSecundario);
+    aparecerElemento(formularioLogin);
 });
 
 registrarUsuario.addEventListener("mouseover", () => {
@@ -81,8 +79,5 @@ logarUsuario.addEventListener("mouseout", () => {
 });
 
 btnFecharModal.addEventListener('click', () => {
-    esconderElemento(modal);
-    resetarFormulario(formularioNovoUsuario);
-    resetarFormulario(formularioLogin);
-    apagarMensagensErro();
+    resetarModal()
 });

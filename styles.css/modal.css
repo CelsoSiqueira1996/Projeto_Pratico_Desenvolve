@@ -78,10 +78,6 @@
   cursor: pointer;
 }
 
-.formulario__registrar {
-  display: none;
-}
-
 .formulario__etiqueta {
   font-family: var(--fonte-secundaria);
   text-align: left;
@@ -104,10 +100,6 @@
 .formulario__texto {
   font-family: var(--fonte-secundaria);
   text-align: center;
-}
-
-.formulario__texto-secundario {
-  display: none;
 }
 
 .formulario__texto__novo-usuario, .formulario__texto__login {
